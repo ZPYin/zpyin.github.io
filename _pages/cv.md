@@ -11,30 +11,38 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Science and Technology of Electronics and Information, Wuhan University, 2010-2014
+* Ph.D (with M.S.) in Space Physics, Wuhan University, 2014-2020 (expected)
 
-Work experience
+Project
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Oct 2017 - Oct 2019: Joint Training PhD student in [TROPOS](tropos.de), funded by Chinese Scholarship Council ([CSC](https://www.csc.edu.cn/))
+  * Absolute lidar calibration
+  * Automatic lidar data processing program
+  * Evaluation of shipborne sun-sky-lunar photometer
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
+* Sep 2016 - Oct 2016: Multiple scattering (MS) simulation
+  * Quantification of the MS effects on the polarimetric lidar measurements in liquid clouds with Monte-Carlo simulation
+
+* Sep 2014 - May 2016: Development of a shipborne Raman-polarization lidar, funded by State Oceanic Administration People Republic of China
+
+* Sep 2013 - May 2014: Development of a robust Licel gluing algorithm
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming
+  * Python
+  * Matlab
+  * IDL
+  * FORTRAN
+* Scientific Writing
+  * Office
+  * Latex
+  * Photoshop
+* OS
+  * Windows
+  * Linux (Ubuntu or Centos)
+  * MacOS
 
 Publications
 ======
