@@ -43,6 +43,8 @@ Skills
   * Windows
   * Linux (Ubuntu or Centos)
   * MacOS
+* Version Control Tool
+  * Git
 
 Publications
 ======

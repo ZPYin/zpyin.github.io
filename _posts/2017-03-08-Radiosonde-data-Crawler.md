@@ -18,16 +18,17 @@ excerpt_separator: <!--more-->
 #### 服务器和相关请求格式
 
 怀俄明大学大气科学研究所提供了一个全球无线电探空仪数据的展示平台[这里](http://weather.uwyo.edu/upperair/sounding.html)，通过这个平台我们可以获取全球所有气象站点的无线电探空仪数据。
-<div align=center>
-  ![website for radiosonde data]({{site.url}}/images/wyoming_sounding.png)
-</div>
 
-通过搜索之后跳转的链接，我们很容易知道它的请求格式为:  
-<small>
-  http://weather.uwyo.edu/cgi-bin/sounding?region=naconf&TYPE=TEXT%3ALIST&YEAR=2017&MONTH=03&FROM=0800&TO=0800&STNM=72672
-</small>>
+![wyoming website](/images/wyoming_sounding.png){: .center-image height='500' width='600'}
 
-这个请求方式的组成为：<small>  
+通过搜索之后跳转的链接，我们很容易知道它的请求格式为:
+
+{% highlight ruby %}
+http://weather.uwyo.edu/cgi-bin/sounding?region=naconf&TYPE=TEXT%3ALIST&YEAR=2017&MONTH=03&FROM=0800&TO=0800&STNM=72672
+{% endhighlight %}
+
+这个请求方式的组成为：
+{% highlight ruby %}
 http://(协议)+  
 weather.uwyo.edu(服务器地址)+  
 /cgi-bin/sounding?(文件地址)+  
@@ -38,7 +39,7 @@ MONTH=03(月份)+&+
 FROM=0800(起始时间：日期+UTC小时)+&+  
 TO=0800(截止时间：日期+UTC小时)+&+  
 STNM=72672(站点号)  
-</small>
+{% endhighlight %}
 
 根据这个请求格式我们很容易定义我们需要查询的数据。
 
@@ -51,7 +52,7 @@ STNM=72672(站点号)
 
 返回的content是一串html文本，里面包含着我们请求的数据
 
-```
+{% highlight html%}
 <HTML>
 <TITLE>University of Wyoming - Radiosonde Data</TITLE>
 <LINK REL="StyleSheet" HREF="/resources/select.css" TYPE="text/css">
@@ -83,26 +84,26 @@ or <A HREF="/upperair/indices.html">sounding indices</A>.
 </BODY> 
 </HTML>
 
-```
+{% endhighlight %}
 
 我们需要从请求返回的html文本中提取我们感兴趣的无线电探空仪数据，通过观察文本我们很容易发现，无线电探空仪的数据是包含在
 
-```
+{% highlight html %}
 <pre>
 	........
 </pre>
-```
+{% endhighlight %}
+
 之中的，因此我们可以通过字符匹配找到起始行和终止行从而提取无线电探空仪数据，代码如下：
-<body>
-  {% highlight ruby %}
- 
-    lineStart = (Where(Stregex(content, '<PRE>') NE -1))[0] + 1L
-    lineEnd = (Where(Stregex(content, '</PRE>') NE -1))[0] - 1L   
-    RSData = content[lineStart+4L:lineEnd] 
-  {% endhighlight %}
-</body>
+
+{% highlight ruby %}
+
+  lineStart = (Where(Stregex(content, '<PRE>') NE -1))[0] + 1L
+  lineEnd = (Where(Stregex(content, '</PRE>') NE -1))[0] - 1L   
+  RSData = content[lineStart+4L:lineEnd] 
+{% endhighlight %}
 
 至此我们就已经完成了无线电探空仪数据的提取，源代码请点击**[这里](https://github.com/ZPYin/Radiosonde)**
 
 注：
-源代码中的一些调用函数可以联系作者本人，邮箱：yzp528172875@gmail.com
+源代码中的一些调用函数可以联系作者本人，邮箱：zp.yin@whu.edu.cn

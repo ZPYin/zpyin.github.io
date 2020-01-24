@@ -8,11 +8,11 @@ tags:
 
 When I try to display a lidar range-corrected signal for a certain day with the codes below. FYI, matlab14a is used to produce the bug.
 
-```matlab
+~~~matlab
 figure;
 p = pcolor(time, height, rcs); 
 set(p, 'EdgeColor', 'none');
-```
+~~~
 
 <center>
 <img src="{{site.url}}/images/pcolor_problem.png" alt="pcolor problem" width="500" height="400">

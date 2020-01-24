@@ -4,4 +4,15 @@ excerpt: "Automatic lidar data processing platform <br/><img src='/images/picass
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+<center>
+<img src='/images/picasso.png'>
+<br>
+<b>
+</b>
+</center>
+
+1. Website link: [http://picasso.tropos.de](#1)
+2. Source code: [Pollynet_Processing_Chain](#2)
+
+[1]: http://picasso.tropos.de
+[2]: https://github.com/PollyNET/Pollynet_Processing_Chain/
