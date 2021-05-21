@@ -1,5 +1,5 @@
 ---
-title: "aerosol measurements with a shipborne photometer"
+title: "Aerosol measurements with a shipborne Sun-sky-lunar photometer and collocated multiwavelength Raman polarization lidar over the Atlantic Ocean"
 collection: publications
 permalink: /publication/2019-10-20-aerosol_measurements_with_a_shipborne_photometer
 excerpt: 'First evaluation of the shipborne sun-sky-lunar photometer over the ocean.'
